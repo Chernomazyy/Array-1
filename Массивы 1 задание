@@ -1,0 +1,30 @@
+using System;
+
+namespace project3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num = Convert.ToInt32(Console.ReadLine());
+            int[] prog = new int[num];
+            int[] kr = new int[prog.Length];
+            int k = 0;
+            while (k < num)
+            {
+                int apnd = Convert.ToInt32(Console.ReadLine());
+                prog[k] = apnd;
+                k++;               
+            }
+            Array.Copy(prog, kr, prog.Length);
+            Array.Sort(prog);           
+            Console.WriteLine( prog[prog.Length-1]);
+            Array.Reverse(kr);
+            foreach (int item in kr)
+            {
+                Console.Write(item + " ");
+            }
+
+        }
+    }
+}
